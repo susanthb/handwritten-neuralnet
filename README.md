@@ -1,13 +1,69 @@
-# Hand Written Character Detection using Neural Net
+# Handwritten Character Detection using Neural Network ✍️🧠
 
-Building a Neural Network from Scratch
-This notebook demonstrates the implementation of a basic two-layer neural network trained on the MNIST digit recognition dataset. It serves as an educational example, providing insights into the fundamental mathematics behind neural networks.
+This project demonstrates the implementation of a basic two-layer neural network trained on the MNIST digit recognition dataset. It serves as an educational example, providing insights into the fundamental mathematics behind neural networks.
 
+## 🎯 Features
 
-Our NN will have a simple two-layer architecture. Input layer  a[0]
-  will have 784 units corresponding to the 784 pixels in each 28x28 input image. A hidden layer  a[1]
-  will have 10 units with ReLU activation, and finally our output layer  a[2]
-  will have 10 units corresponding to the ten digit classes with softmax activation.
+- Fully connected neural network with:
+  - **Input Layer**: 784 neurons (28x28 pixel images)
+  - **Hidden Layer**: 10 neurons with ReLU activation
+  - **Output Layer**: 10 neurons (one for each digit) with softmax activation
+- Forward and backward propagation from scratch
+- Gradient descent optimization
+- Accuracy evaluation on the MNIST dataset
+
+## 🛠️ Technology Stack
+
+- **Deep Learning Framework**: Custom implementation using NumPy
+- **Data Processing**: Pandas, NumPy
+- **Visualization**: Matplotlib
+
+## 📋 Prerequisites
+
+- Python 3.7+
+- Required Python packages (see Installation)
+- Kaggle API access (for dataset download)
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+```
+git clone https://github.com/susanthb/handwritten-neuralnet.git
+
+cd handwritten-neuralnet
+```
+
+2. Install required packages:
+```
+pip install numpy pandas matplotlib
+```
+
+3. Download the dataset:
+- Go to [Kaggle - Digit Recognizer](https://www.kaggle.com/competitions/digit-recognizer/data)
+- Download `train.csv` and place it in the project directory
+
+## 🚀 Usage
+
+1. Run the training script:
+```
+python neuralnet.py
+```
+
+2. The system will:
+- Load and preprocess the dataset
+- Train the neural network from scratch
+- Display training progress every 10 iterations
+- Print accuracy on the training set
+
+## 💡 How It Works
+
+### Neural Network Architecture
+
+Our neural network follows a simple two-layer architecture:
+
+- **Input Layer**: \( A^{[0]} \) with 784 units (28x28 pixel images)
+- **Hidden Layer**: \( A^{[1]} \) with 10 units, using ReLU activation
+- **Output Layer**: \( A^{[2]} \) with 10 units, corresponding to digit classes (0-9), using softmax activation
 
 **Forward propagation**
 
@@ -54,3 +110,18 @@ Backprop
 - $dB^{[1]}$: 10 x 1
 
 
+
+## 📊 Performance Metrics
+
+- Achieves ~90% accuracy on the training set
+- Loss reduction with each iteration
+- Adjustable learning rate and iterations for optimization
+
+## 🌐 Future Improvements
+
+- Implement batch normalization for stability
+- Add support for GPU acceleration using TensorFlow/PyTorch
+- Expand model to support deeper architectures
+
+---
+Developed with ❤️ for understanding neural networks from scratch!
